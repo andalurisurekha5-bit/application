@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-lg-6">
+    <div class="card shadow-sm border-0">
+      <div class="card-body p-4">
+        <h3 class="card-title mb-3">Student Login</h3>
+        <p class="text-muted">Log in to enroll, track courses, and access training updates.</p>
+        <form method="post" novalidate>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required placeholder="you@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" required placeholder="Enter password">
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+        <div class="mt-4 small text-muted">
+          Demo credentials: student@example.com / password123
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-lg-7">
+    <div class="card shadow-sm border-0">
+      <div class="card-body p-4">
+        <h3>Course Enrollment</h3>
+        <p class="text-muted">Complete the form below and our team will contact you to confirm the training schedule.</p>
+        <form method="post" novalidate>
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="tel" class="form-control" id="phone" name="phone" required>
+          </div>
+          <div class="mb-3">
+            <label for="course" class="form-label">Select Course</label>
+            <select class="form-select" id="course" name="course" required>
+              <option value="">Choose a course</option>
+              {% for course_item in courses %}
+                <option value="{{ course_item.name }}" {% if course_item.name == course %}selected{% endif %}>{{ course_item.name }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Submit Enrollment</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

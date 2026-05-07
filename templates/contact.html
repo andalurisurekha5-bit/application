@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row gy-4">
+  <div class="col-lg-6">
+    <div class="card shadow-sm border-0 h-100">
+      <div class="card-body p-4">
+        <h3>Contact Information</h3>
+        <p class="text-muted">Reach out to us for training details, enrollment support, or career guidance.</p>
+        <ul class="list-unstyled mt-4">
+          <li class="mb-3">
+            <strong>Email:</strong> <a href="mailto:info@sea2systems.com">info@sea2systems.com</a>
+          </li>
+          <li>
+            <strong>Phone:</strong> <a href="tel:+918179066637">8179066637</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="card shadow-sm border-0 h-100">
+      <div class="card-body p-4">
+        <h3>Send an Inquiry</h3>
+        <form method="post" novalidate>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

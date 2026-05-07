@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="hero-section p-5 rounded-4 shadow-sm text-white" style="background: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%);">
+  <div class="row align-items-center">
+    <div class="col-lg-7">
+      <h1 class="display-5 fw-bold">Sea2Systems Training Institute</h1>
+      <p class="lead">Join industry-ready training programs in AI, data engineering, cloud, and modern software development with zero advance fee and full placement support.</p>
+      <div class="mt-4">
+        <a href="{{ url_for('trainings') }}" class="btn btn-light btn-lg me-2">View Trainings</a>
+        <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">Contact Us</a>
+      </div>
+    </div>
+    <div class="col-lg-5 mt-4 mt-lg-0">
+      <div class="card shadow-lg border-0">
+        <div class="card-body p-4">
+          <h4 class="card-title">Why choose us?</h4>
+          <ul class="list-unstyled mt-3">
+            <li class="mb-2">✅ No advance amount required</li>
+            <li class="mb-2">✅ 100% job assistance</li>
+            <li class="mb-2">✅ Practical projects and mentorship</li>
+            <li class="mb-2">✅ Flexible online classes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-5">
+  <div class="col-lg-4 mb-4">
+    <div class="feature-card p-4 rounded-4 shadow-sm h-100">
+      <h5>Comprehensive Curriculum</h5>
+      <p>Courses built to help students go from fundamentals to real-world applications.</p>
+    </div>
+  </div>
+  <div class="col-lg-4 mb-4">
+    <div class="feature-card p-4 rounded-4 shadow-sm h-100">
+      <h5>Experienced Trainers</h5>
+      <p>Learn from subject-matter experts who deliver practical, hands-on sessions.</p>
+    </div>
+  </div>
+  <div class="col-lg-4 mb-4">
+    <div class="feature-card p-4 rounded-4 shadow-sm h-100">
+      <h5>Career Support</h5>
+      <p>Resume reviews, interview coaching, and placement guidance for each learner.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
